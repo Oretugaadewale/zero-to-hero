@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static C__tutorial.oop.Age;
 
 namespace C__tutorial.oop
 {
@@ -110,8 +111,45 @@ namespace C__tutorial.oop
     //        i2.InterfaceMethod();
     //    }
     //}
+    // better understanding
+    public interface ICalculate
+    {
+        void Calculate(int number, int year);
+    }
 
-   
+    public class Age : ICalculate
+    {
+        public void Calculate(int number, int year)
+        {
+            // Implement your calculation logic here
+            int Ans = number * year;
+            Console.WriteLine("Result: " + Ans);
+        }
+
+        public class Details : ICalculate
+        {
+            public void Calculate(int month, int data)
+            {
+                int res = month + data;
+                Console.WriteLine("Result2: " + res);
+            }
+        }
+    }
+
+    public class Program
+    {
+        public static void Main()
+        {
+            Age A = new Age();
+            A.Calculate(20, 20);
+
+            Details D = new Details();
+            D.Calculate(10, 10);
+        }
+    }
+
+
+
 
 }
 

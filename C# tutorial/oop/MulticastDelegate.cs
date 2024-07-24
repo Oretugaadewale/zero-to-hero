@@ -10,14 +10,14 @@ namespace C__tutorial.oop
     internal class MulticastDelegate
     {
         // with return type
-        public delegate void sampleDelegate(out int Integer);
+       // public delegate void sampleDelegate(out int Integer);
         //For normal way without return type
         //public delegate void sampleDelegate();
 
-        class Pragim
-        {
-            public static void Main()
-            {
+        //class Pragim
+        //{
+        //    public static void Main()
+        //    {
                 //sampleDelegate del1, del2, del3, del4;
                 //del1 = new sampleDelegate(sampleMethodOne);
                 //del2 = new sampleDelegate(sampleMethodTwo);
@@ -27,28 +27,31 @@ namespace C__tutorial.oop
                 //del4();
 
                 // another method to call method
-                sampleDelegate del = new sampleDelegate(sampleMethodOne);
-                del += sampleMethodTwo;
+                //sampleDelegate del = new sampleDelegate(sampleMethodOne);
+                //del += sampleMethodTwo;
                 //del += sampleMethodThree;
                 //del -= sampleMethodOne;
-                int DelegateOutputParameterValue  = - 1;
-                del(out DelegateOutputParameterValue);
-                Console.WriteLine("DelegateOutputParameterValue = {0}", DelegateOutputParameterValue);
-            }
+                //int DelegateOutputParameterValue  = - 1;
+                //del(out DelegateOutputParameterValue);
+                //Console.WriteLine("DelegateOutputParameterValue = {0}", DelegateOutputParameterValue);
+           // }
             // with return type
-            public static void  sampleMethodOne(out int Number)
-            {
-                Number = 1;
-            }
-            public static void sampleMethodTwo(out int Number )
-            {
-                Number = 2;
-            }
+            //public static void  sampleMethodOne(out int Number)
+            //{
+            //    Number = 1;
+            //}
+            //public static void sampleMethodTwo(out int Number )
+            //{
+            //    Number = 2;
+            //}
             // without return type
             //public static void sampleMethodThree()
             //{
             //    Console.WriteLine("sampleMethodthree invoked");
             //}
-        }
+        
     }
+
+ 
 }
+
